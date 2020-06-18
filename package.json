@@ -2,13 +2,18 @@
   "name": "p7-front",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
     "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
     "cross-env": "^7.0",
     "css-loader": "^3.6.0",
     "eslint": "6.8.0",
@@ -34,8 +39,5 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {
-    "-": "^0.0.1",
-    "D": "^1.0.0"
-  }
+  "dependencies": {}
 }
