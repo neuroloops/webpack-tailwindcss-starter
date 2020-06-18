@@ -1,4 +1,7 @@
 {
+  "name": "p7-front",
+  "version": "1.0.0",
+  "description": "",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
@@ -8,15 +11,31 @@
     "autoprefixer": "^9.8.0",
     "cross-env": "^7.0",
     "css-loader": "^3.6.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "2.5.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^4.3.0",
     "postcss": "^7.0.32",
     "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.5",
     "style-loader": "^1.2.1",
     "stylelint-config-recommended": "^3.0.0",
+    "svg-inline-loader": "^0.8.2",
+    "svg-loader": "^0.0.2",
     "tailwindcss": "^1",
+    "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "D": "^1.0.0"
   }
 }
