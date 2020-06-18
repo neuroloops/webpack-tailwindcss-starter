@@ -15,6 +15,54 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpg|jp(e*)g|gif|png)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 102400,
+              name: '[name]-[contenthash].[ext]',
+              outputPath: 'images',
+            },
+          },
+        ],
+      }, // end images rule
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+              name: '[name]-[contenthash].[ext]',
+              outputPath: 'images',
+            },
+          },
+        ],
+      }, // end svg rule
+      {
+        test: /\.(woff(2)?|ttf|eot)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[contenthash].[ext]',
+              outputPath: 'fonts',
+            },
+          },
+        ],
+      }, // end font rule
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: { presets: ['@babel/preset-env'] },
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
