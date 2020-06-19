@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Tailwind Starter Template</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link id="favicon" rel="icon" type="img/png" sizes="32x32" href="../images/camera.jpg" />
+    <title>Orinoco</title>
   </head>
-  <body>
-    <img alt="logo orinoco" id="logo" src="../images/logo.svg" />
-    <div class="min-h-screen flex items-center justify-center">
-      <h1 class="text-5xl text-purple-600 font-sans">Greetings.</h1>
-      <h2 class="text-green-800 font-bold">May the force be with you</h2>
+
+  <body class="antialiased bg-black">
+    <header
+      class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 w-full top-0 fixed z-40"
+    >
+      <div class="flex-1 flex justify-between items-center">
+        <a href="#">
+          <img alt="logo orinoco" id="logo" src="../img/logo.svg" />
+        </a>
+      </div>
+
+      <label for="menu-toggle" class="pointer-cursor lg:hidden block">
+        <svg
+          class="fill-current text-gray-900"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+        >
+          <title>menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </label>
+      <input class="hidden" type="checkbox" id="menu-toggle" />
+
+      <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+        <nav>
+          <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
+            <li>
+              <a
+                id="menu_link_home"
+                class="lg:p-4 py-3 px-0 block border-b-4 border-transparent hover:border-purple-600"
+                href="#home"
+                ><img src="//img:0" id="homeIcon" alt="Icon page accueil" class="icon" /> Accueil
+              </a>
+            </li>
+            <li>
+              <a
+                id="menu_link_products"
+                class="lg:p-4 py-3 px-0 block border-b-4 border-transparent hover:border-purple-600"
+                href="#products_page_link"
+                ><img src="//img:0" id="productsIcon" alt="Icon page produits" class="icon" />
+                Produits
+              </a>
+            </li>
+            <li>
+              <a
+                class="lg:p-4 py-3 px-0 block border-b-4 border-transparent hover:border-purple-600"
+                href="#"
+                ><img src="//img:0" id="cartIcon" alt="Icon page panier" class="icon" />
+                Panier
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="py-20 hero" id="hero">
+      <div id="hero_container">
+        <h2 class="text-4xl font-bold mb-2 text-green-600" id="hero_h2">Titre par default</h2>
+        <h3 class="text-2xl mb-8 text-gray-200">
+          Votre déclencheur de sourire personnalisé
+        </h3>
+        <a href="#products_page">
+          <button
+            class="mb-8 bg-purple-600 font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider"
+          >
+            En savoir plus
+          </button></a
+        >
+      </div>
     </div>
   </body>
 </html>

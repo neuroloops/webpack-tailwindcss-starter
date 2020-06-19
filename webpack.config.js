@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    index: ['babel-polyfill', './src/index.js', './src/styles.css'],
+    index: ['babel-polyfill', './src/index.js', './src/tailwind.css'],
   },
   output: {
     filename: 'js/[name]-[contenthash].js',
@@ -49,7 +49,7 @@ module.exports = {
               name: '[name]-[contenthash].[ext]',
               outputPath: 'fonts',
             },
-          },
+          },ExtractTextPlugin
         ],
       }, // end font rule
       {
@@ -72,7 +72,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin('styles.css', {
+    new ExtractTextPlugin('tailwind.css', {
       disable: process.env.NODE_ENV === 'development',
     }),
     new HtmlWebpackPlugin({

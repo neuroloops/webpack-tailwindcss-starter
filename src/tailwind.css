@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+@tailwind base;
+body {
+  @apply text-white;
+}
+h1 {
+  @apply text-2xl font-medium mb-2;
+}
+h2 {
+  @apply text-white;
+}
+
+@tailwind components;
+#menu-toggle:checked + #menu {
+  display: block;
+}
+#hero_container {
+  @apply max-w-6xl px-40 py-12 bg-black bg-opacity-50  rounded-lg  mx-auto;
+}
+
+.hero {
+  @apply bg-center flex items-center;
+  height: 100vh;
+}
+.icon {
+  @apply inline pr-1 h-8;
+}
+
+@tailwind utilities;
