@@ -1,6 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const svgToMiniDataURI = require('mini-svg-data-uri');
 const path = require('path');
 
 module.exports = {
@@ -34,9 +35,7 @@ module.exports = {
           {
             loader: 'svg-url-loader',
             options: {
-              limit: 1000,
-              name: '[name]-[contenthash].[ext]',
-              outputPath: 'images',
+              generator: (content) => svgToMiniDataURI(content.toString()),
             },
           },
         ],
