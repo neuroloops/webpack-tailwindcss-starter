@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -20,7 +21,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 102400,
+              limit: 1020,
               name: '[name]-[contenthash].[ext]',
               outputPath: 'images',
             },
@@ -33,7 +34,7 @@ module.exports = {
           {
             loader: 'svg-url-loader',
             options: {
-              limit: 10000,
+              limit: 1000,
               name: '[name]-[contenthash].[ext]',
               outputPath: 'images',
             },
@@ -49,7 +50,8 @@ module.exports = {
               name: '[name]-[contenthash].[ext]',
               outputPath: 'fonts',
             },
-          },ExtractTextPlugin
+          },
+          ExtractTextPlugin,
         ],
       }, // end font rule
       {

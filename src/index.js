@@ -10,7 +10,7 @@ document.getElementById('homeIcon').src = homeIcon;
 document.getElementById('cartIcon').src = cartIcon;
 document.getElementById('productsIcon').src = productsIcon;
 
-console.log('le js fonctionne');
+console.log('Follow the White Rabbit');
 
 const logoImg = document.getElementById('logo');
 logoImg.src = logoPath;
